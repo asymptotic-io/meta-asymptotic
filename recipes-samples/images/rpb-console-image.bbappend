@@ -21,4 +21,5 @@ IMAGE_INSTALL += " \
 	rmtfs \
 	tqftpserv \
 	fastrpc \
+	compressed-setup \
 	"
