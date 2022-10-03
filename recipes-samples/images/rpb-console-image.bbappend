@@ -22,4 +22,5 @@ IMAGE_INSTALL += " \
 	tqftpserv \
 	fastrpc \
 	compressed-setup \
+	fcplay \
 	"

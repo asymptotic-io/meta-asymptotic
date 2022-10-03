@@ -11,6 +11,7 @@ SRC_URI = "git://git.alsa-project.org/tinycompress.git;protocol=git;branch=maste
 
 S = "${WORKDIR}/git"
 
-EXTRA_OECONF:append = " --enable-fcplay"
+# The fcplay in tinycompress does not work for WMA
+# EXTRA_OECONF:append = " --enable-fcplay"
 
 inherit autotools pkgconfig
