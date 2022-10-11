@@ -13,10 +13,9 @@ DEPENDS = "glib-2.0 glib-2.0-native lua pipewire \
     ${@bb.utils.contains("DISTRO_FEATURES", "gobject-introspection-data", "python3-native python3-lxml-native doxygen-native", "", d)} \
 "
 
-SRCREV = "a585eadcb6946645fae5c5a2d5a9da5f2921b658"
+SRCREV = "3febe2200e95be26ed3a42c9b75c6007e70bda25"
 SRC_URI = "git://gitlab.freedesktop.org/SanchayanMaity/wireplumber.git;branch=compressed;protocol=https \
            file://90-OE-disable-session-dbus-dependent-features.lua \
-           file://90-disable-no-dsp.lua \
            "
 
 S = "${WORKDIR}/git"
@@ -56,7 +55,6 @@ WP_MODULE_SUBDIR = "wireplumber-0.4"
 
 add_custom_lua_config_scripts() {
     install -m 0644 ${WORKDIR}/90-OE-disable-session-dbus-dependent-features.lua ${D}${datadir}/wireplumber/main.lua.d
-    install -m 0644 ${WORKDIR}/90-disable-no-dsp.lua ${D}${datadir}/wireplumber/policy.lua.d
 }
 
 do_install[postfuncs] += "add_custom_lua_config_scripts"
