@@ -6,8 +6,8 @@ LIC_FILES_CHKSUM = "file://COPYING;md5=cf9105c1a2d4405cbe04bbe3367373a0"
 
 DEPENDS = "alsa-lib ffmpeg"
 
-SRCREV = "7dc18a725646f2662042aa17a5a181739f0c8021"
-SRC_URI = "git://git.alsa-project.org/tinycompress.git;protocol=git;branch=master"
+SRCREV = "fef7b85f0c92cdd88af8a33a34ea0f29013dde1b"
+SRC_URI = "git://github.com/asymptotic-io/tinycompress.git;protocol=https;branch=get_caps"
 
 S = "${WORKDIR}/git"
 
