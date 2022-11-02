@@ -13,7 +13,7 @@ DEPENDS = "glib-2.0 glib-2.0-native lua pipewire \
     ${@bb.utils.contains("DISTRO_FEATURES", "gobject-introspection-data", "python3-native python3-lxml-native doxygen-native", "", d)} \
 "
 
-SRCREV = "3febe2200e95be26ed3a42c9b75c6007e70bda25"
+SRCREV = "88f5e8c8e349aa0055b52cbe66e06acb5a2e09d3"
 SRC_URI = "git://gitlab.freedesktop.org/SanchayanMaity/wireplumber.git;branch=compressed;protocol=https \
            file://90-OE-disable-session-dbus-dependent-features.lua \
            "
