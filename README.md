@@ -105,7 +105,7 @@ systemctl start pipewire
 systemctl start wireplumber
 ```
 
-To test compressed offload with `pipewire`, on one terminal execute
+To test compressed offload with `pipewire` and `pw-cat`, on one terminal execute
 
 ```bash
 pw-cat -o -p jambi.mp3 --target 0
@@ -115,6 +115,18 @@ and on another
 
 ```bash
 pw-link pw-cat Compressed-Sink
+```
+
+To test compressed offload with `pipewire` and `GStreamer`, on one terminal execute
+
+```bash
+gst-launch-1.0 filesrc location=jambi.mp3 ! mpegaudioparse ! pipewiresink mode=2 target-object=Compressed-Sink
+```
+
+and on another
+
+```bash
+pw-link gst-launch-1.0 Compressed-Sink
 ```
 
 Testing FLAC
@@ -171,6 +183,18 @@ and on another
 
 ```bash
 pw-link pw-cat Compressed-Sink
+```
+
+To test compressed offload with `pipewire` and `GStreamer`, on one terminal execute
+
+```bash
+gst-launch-1.0 filesrc location=sample.flac ! flacparse ! pipewiresink mode=2 target-object=Compressed-Sink
+```
+
+and on another
+
+```bash
+pw-link gst-launch-1.0 Compressed-Sink
 ```
 
 Dot graph
