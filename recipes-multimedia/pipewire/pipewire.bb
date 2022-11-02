@@ -16,7 +16,7 @@ LIC_FILES_CHKSUM = " \
 
 DEPENDS = "dbus ncurses tinycompress ffmpeg"
 
-SRCREV = "5c656de2b56a3bd5f3133252d7ebc75d4b4b885b"
+SRCREV = "5ef361370d1ce33c2038248bb92c694feb5a57ce"
 SRC_URI = "git://gitlab.freedesktop.org/SanchayanMaity/pipewire.git;branch=compressed;protocol=https \
           file://load-compressed-sink.conf \
           "
