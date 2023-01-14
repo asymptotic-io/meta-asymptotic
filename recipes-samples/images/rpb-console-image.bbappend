@@ -7,6 +7,8 @@ IMAGE_INSTALL += " \
 	libsndfile1 \
 	pipewire \
 	wireplumber \
+	pipewire-dbg \
+	wireplumber-dbg \
 	pipewire-tools \
 	pipewire-spa-tools \
 	gstreamer1.0-plugins-base \
