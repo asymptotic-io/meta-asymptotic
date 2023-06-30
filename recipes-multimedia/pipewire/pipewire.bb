@@ -16,8 +16,8 @@ LIC_FILES_CHKSUM = " \
 
 DEPENDS = "dbus ncurses tinycompress ffmpeg"
 
-SRCREV = "5ef361370d1ce33c2038248bb92c694feb5a57ce"
-SRC_URI = "git://gitlab.freedesktop.org/SanchayanMaity/pipewire.git;branch=compressed;protocol=https \
+SRCREV = "4cc22d60d2280fb3c771e6a246e79c90819fd485"
+SRC_URI = "git://gitlab.freedesktop.org/pipewire/pipewire.git;protocol=https \
           file://load-compressed-sink.conf \
           "
 
@@ -71,7 +71,8 @@ EXTRA_OEMESON += " \
     -Dbluez5-codec-aptx=disabled \
     -Dbluez5-codec-ldac=disabled \
     -Dlegacy-rtkit=false \
-    -Dcompressed-offload=enabled \
+    -Dpw-cat-ffmpeg=enabled \
+    -Dcompress-offload=enabled \
     -Dpipewire-alsa=enabled \
 "
 
